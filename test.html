@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        
+        <script>
+                        $(document).ready(function(){
+                        });
+                    
+                    function showName(){
+                        document.getElementById('answer').innerHTML = document.getElementById('firstname').value +' ' +document.getElementById('lastname').value 
+                    }
+                    function showPopUp(){
+                        window.alert(document.getElementById('firstname').value +' ' +document.getElementById('lastname').value)
+                    }
+                    
+                    function showConsole(){
+                        var first_name = document.getElementById('firstname').value;
+                        var last_name = document.getElementById('lastname').value
+                        console.log(first_name + ' ' + last_name)
+                    }
+
+                    function showTimeOfDay(){
+                        var time = document.getElementById('time').value;
+                        if (time > 0 && time < 12){
+                        document.getElementById('answer').innerHTML = "morning"
+                    }else if(time > 12 && time < 18){
+                        document.getElementById('answer').innerHTML = "afternoon"  
+                    }else{
+                        document.getElementById('answer').innerHTML = "evening"
+                    }
+
+                    }   
+
+
+                    function listEvenNumbers(){
+                     for(var x=2;x<=20;x+=2)
+                     document.getElementById('answer').innerHTML = document.getElementById('answer').innerHTML + "<br>" + x
+
+
+                    }  
+
+                    function addNumbers(p1,p2){
+                        return p1+p2
+                    }
+        </script>
+    </head>
+    
+    <body>
+        <div class="container">
+                <div class='row'>
+                    <div class='col-lg-12'>
+                        <!--form>
+                            First name:<br>
+                            <input class="form-control" type="text" name="firstname" id="firstname" value="Mickey">
+                            <br>
+                            Last name:<br>
+                            <input class="form-control"type="text" name="lastname" id="lastname" value="Mouse">
+                            <br><br>
+                            <input class="btn btn-primary" value="Submit" onclick="showConsole();">
+                      </form-->
+
+                  <!--form>
+                        Time:<br>
+                        <input onkeyup="document.getElementById('answer').innerHTML = this.value" class="form-control" type="text" name="time" id="time" value="10">
+                        <br><br>
+                        <input class="btn btn-primary" value="Check Time" onclick="showTimeOfDay();">
+                  </form-->
+
+
+
+                            <div id="answer"></div>
+
+
+                            <script>
+                                var text = ""
+                            var numbers = [23, 80, 42, 35, 28];
+                            for(cnt=0; cnt< numbers.length; cnt++){
+
+                               if (numbers[cnt] % 2 == 0){ 
+                               text = text + numbers[cnt] + "<br>";
+
+                            }
+
+
+
+                            }
+                            text = text + "<ul>";
+
+
+
+
+                            document.getElementById('answer').innerHTML = text;
+
+
+                            
+                            </script>
+
+                                <!--script>listEvenNumbers()</script> -->
+
+
+                            
+                    
+                                            
+                       
+        </div>  
+    </body>
+    
+</html> 
